@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Calculatrice du consultant - Québec</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+<header class="header">
+  <img src="logo.png" alt="Logo" class="logo">
+      <div class="title-container">
+        <h1 class="title">Calculatrice du consultant - Québec</h1>
+        <p class="description">Cet outil est conçu pour vous aider à calculer vos gains et les taxes dues (TPS et TVQ) pour une facturation rapide et précise.</p>
+      </div>
+</header>
+<main>
+  <form>
+    <label class="form-label" for="hours">Nombre d'heures travaillées 🕐</label>
+    <input class="form-input" type="number" id="hours" name="hours" min="0" max="9999" required>
+    <label class="form-label" for="rate">Taux horaire ＄</label>
+    <input class="form-input" type="number" id="rate" name="rate" min="0" max="999.99" step="0.01" required>
+
+    <div class="button-container">
+      <button class="calculate-button button" type="button" onclick="calculateTotal()">Calculer</button>
+      <button class="clear-button button" type="button" onclick="clearForm()">Effacer</button>
+    </div>
+
+  </form>
+  <div id="result"></div>
+  <div id="errors" class="errors"></div>
+</main>
+
+    <footer>
+      <nav>
+        <ul class="nav-links">
+          <li class="nav-link"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-text">&copy; 2023 - Tous droits réservés</div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
