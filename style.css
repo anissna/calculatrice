@@ -57,7 +57,7 @@ button:hover {
 
 #result {
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 0.5rem;
   margin: 2rem auto;
   max-width: 600px;
