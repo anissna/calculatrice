@@ -17,16 +17,22 @@
     </header>
     <main>
       <form>
-        <label for="hours" class="form-label">Nombre d'heures travaillées 🕐</label>
-        <input type="number" id="hours" name="hours" min="0" max="9999" required class="form-input">
-        <label for="rate" class="form-label">Taux horaire ＄</label>
-        <input type="number" id="rate" name="rate" min="0" max="999.99" step="0.01" required class="form-input">
+        <div class="form-field">
+          <label for="hours" class="form-label">Nombre d'heures travaillées 🕐</label>
+          <input type="number" id="hours" name="hours" min="0" max="9999" required class="form-input" aria-describedby="hours-help">
+          <small id="hours-help" class="form-help-text">Entrez le nombre d'heures travaillées (0-9999).</small>
+        </div>
+        <div class="form-field" style="margin-top: 30px;">
+          <label for="rate" class="form-label">Taux horaire ＄</label>
+          <input type="number" id="rate" name="rate" min="0" max="999.99" step="0.01" required class="form-input" aria-describedby="rate-help">
+          <small id="rate-help" class="form-help-text">Entrez le taux horaire en dollars (0-999.99).</small>
+        </div>
         <div class="button-container">
           <button type="button" onclick="calculateTotal()" class="calculate-button button">Calculer</button>
-          <button type="button" onclick="clearForm()" class="clear-button button">Effacer</button>
+          <button type="button" onclick="clearForm()" class="clear-button button" aria-label="Effacer le formulaire">Effacer</button>
         </div>
       </form>
-      <div id="result"></div>
+      <div id="result" role="alert" aria-live="polite"></div>
       <div class="errors" id="errors"></div>
     </main>
     <footer>
