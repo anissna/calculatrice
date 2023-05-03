@@ -2,7 +2,7 @@ function calculateTotal() {
   const hours = parseFloat(document.getElementById("hours").value);
   const rate = parseFloat(document.getElementById("rate").value);
   if (isNaN(hours) || isNaN(rate) || hours < 0 || rate < 0) {
-    document.getElementById("errors").innerHTML = "Veuillez entrer des nombres valides et positifs.";
+    document.getElementById("errors").innerHTML = "Erreur: Veuillez entrer des nombres valides! ";
     document.getElementById("result").innerHTML = "";
   } else {
     const total = hours * rate;
